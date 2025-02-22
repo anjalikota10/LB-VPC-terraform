@@ -26,3 +26,8 @@ module "route" {
   igw_id     = module.igw.igw_id
   subnet_ids = module.subnet.subnet_ids
 }
+
+module "security_group" {
+  source = "./modules/Sg"
+  vpc_id = module.vpc.vpc_id
+}
